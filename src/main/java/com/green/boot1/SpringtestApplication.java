@@ -1,4 +1,4 @@
-package com.green.springtest;
+package com.green.boot1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

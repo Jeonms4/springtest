@@ -1,4 +1,4 @@
-package com.green.springtest;
+package com.green.boot1;
 
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
@@ -11,8 +11,8 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@Log4j2
 @SpringBootTest
+@Log4j2
 public class DataSourceTests {
     @Autowired
     private DataSource dataSource;
@@ -20,10 +20,10 @@ public class DataSourceTests {
     @Test
     public void testConnection() throws SQLException {
         @Cleanup
-        Connection conn = dataSource.getConnection();
+        Connection conn=dataSource.getConnection();
 
         log.info("연결객체" + conn);
-        Assertions.assertNotNull(conn);
-    }
+        Assertions.assertNotNull( conn);
 
+    }
 }
