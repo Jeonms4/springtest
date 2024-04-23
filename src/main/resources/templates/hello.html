@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${msg}"></h1>
+<h1 th:text="${animal[0]}"></h1>
+
+<div th:with="num1=9">
+    <h3 th:text="${num1}"></h3>
+</div>
+<hr>
+
+<li th:each="animal : ${animals}" th:text="${animal}">
+</li>
+</body>
+</html>

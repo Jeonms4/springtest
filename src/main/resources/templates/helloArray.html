@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5 th:text="${animals[0]}"></h5>
+<h5 th:text="${animals[1]}"></h5>
+<h5 th:text="${animals[2]}"></h5>
+<hr>
+<ol>
+    <th:block th:each="ani:${animals}">
+<!--        <li>[[${ani}]]</li>-->
+    </th:block>
+</ol>
+<hr>
+<ol>
+    <th:block th:each="ani, status :${animals}">
+        <!--        <li>[[${ani}]]</li>-->
+        [[${status}]]
+        <hr>
+        인덱스 : [[${status.index}]], 인덱스 : [[${status.count}]], 크기 : [[${status.size}]], 현재값 : [[${status.current}]] <br>
+    </th:block>
+</ol>
+</body>
+</html>
